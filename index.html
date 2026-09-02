@@ -201,10 +201,16 @@ document.getElementById("themeBtn").addEventListener("click",()=>{theme = theme=
 document.getElementById("year").textContent = new Date().getFullYear();
 applyTheme();applyLang();
 /* Avatar image placeholder: set PHOTO_URL to your image; falls back to initials "SB" */
-const PHOTO_URL = "";
+const PHOTO_URL = "https://github.com/AmoShahram1349/AmoShahram1349.github.io/main/assets/images/profile.jpg"; 
+
 if (PHOTO_URL) {
   const img = new Image();
-  img.onload = () => { document.getElementById("avatar").innerHTML = ""; document.getElementById("avatar").style.background = `url('${PHOTO_URL}') center/cover`; };
+  img.onload = () => { 
+    const avatarEl = document.getElementById("avatar");
+    avatarEl.innerHTML = ""; 
+    avatarEl.style.background = `url('${PHOTO_URL}') center/cover`; 
+    avatarEl.style.borderRadius = "50%"; // اطمینان از گرد بودن
+  };
   img.src = PHOTO_URL;
 }
 </script>
