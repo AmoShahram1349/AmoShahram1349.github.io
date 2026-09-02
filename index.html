@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahram Barzani — Fullstack Senior Engineer</title>
+<meta name="description" content="Shahram Barzani (AmoShahram) — Senior Backend Developer & Fullstack Engineer with 25+ years of experience in .NET, Angular, Flutter and enterprise systems.">
+<style>
+:root{
+  --bg:#f6f8fb;--surface:#ffffff;--text:#101828;--muted:#5a6472;--border:#e3e8ef;
+  --accent:#4f46e5;--accent2:#0ea5e9;--card-shadow:0 8px 24px rgba(16,24,40,.07);
+}
+[data-theme="dark"]{
+  --bg:#0b1020;--surface:#121a2e;--text:#e8ecf4;--muted:#98a2b3;--border:#1f2a44;
+  --accent:#818cf8;--accent2:#38bdf8;--card-shadow:0 8px 24px rgba(0,0,0,.4);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Tahoma,Vazirmatn,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;transition:background .3s,color .3s}
+html[dir="rtl"] body{font-family:Vazirmatn,Tahoma,"Segoe UI",sans-serif}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;flex-wrap:wrap;gap:10px}
+.brand{font-weight:800;font-size:1.1rem;color:var(--accent)}
+.nav-links{display:flex;gap:18px;flex-wrap:wrap}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.92rem}
+.nav-links a:hover{color:var(--accent)}
+.controls{display:flex;gap:8px}
+.btn-icon{background:var(--surface);border:1px solid var(--border);color:var(--text);border-radius:10px;padding:6px 12px;cursor:pointer;font-size:.9rem}
+.btn-icon:hover{border-color:var(--accent);color:var(--accent)}
+section{padding:72px 0}
+.section-title{font-size:1.7rem;font-weight:800;margin-bottom:28px;position:relative;display:inline-block}
+.section-title::after{content:"";position:absolute;bottom:-8px;left:0;width:52px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+html[dir="rtl"] .section-title::after{left:auto;right:0}
+/* hero */
+.hero{display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+.avatar{width:150px;height:150px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:#fff;font-size:3rem;font-weight:800;flex-shrink:0;box-shadow:var(--card-shadow)}
+.hero h1{font-size:2.4rem;font-weight:900}
+.hero .role{color:var(--accent);font-weight:700;margin:6px 0 14px}
+.hero p.bio{max-width:640px;color:var(--muted)}
+.metrics{display:flex;gap:16px;margin-top:26px;flex-wrap:wrap}
+.metric{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 22px;box-shadow:var(--card-shadow);text-align:center}
+.metric b{display:block;font-size:1.5rem;color:var(--accent)}
+.metric span{font-size:.85rem;color:var(--muted)}
+/* skills */
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:var(--card-shadow)}
+.card h3{margin-bottom:12px;font-size:1.05rem}
+.tag{display:inline-block;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);border-radius:999px;padding:4px 12px;font-size:.82rem;margin:3px 4px 3px 0;font-weight:600}
+/* projects */
+.proj{margin-bottom:18px}
+.proj-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.proj h3{font-size:1.15rem}
+.badge{font-size:.72rem;font-weight:700;border-radius:999px;padding:3px 10px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff}
+.proj p{color:var(--muted);margin:8px 0;font-size:.95rem}
+.proj a{color:var(--accent2);text-decoration:none;font-weight:600;font-size:.9rem}
+.proj a:hover{text-decoration:underline}
+/* experience */
+.exp li{margin-bottom:10px;color:var(--muted);margin-left:20px}
+html[dir="rtl"] .exp li{margin-left:0;margin-right:20px}
+.exp b{color:var(--text)}
+/* contact & footer */
+.contact-links{display:flex;gap:14px;flex-wrap:wrap}
+.contact-links a{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 20px;color:var(--text);text-decoration:none;font-weight:600;box-shadow:var(--card-shadow)}
+.contact-links a:hover{border-color:var(--accent);color:var(--accent)}
+footer{border-top:1px solid var(--border);padding:26px 0;text-align:center;color:var(--muted);font-size:.9rem}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:640px){.hero{gap:20px}.hero h1{font-size:1.7rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">SB · Shahram Barzani</div>
+    <nav class="nav-links">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#skills" data-i18n="nav_skills">Skills</a>
+      <a href="#projects" data-i18n="nav_projects">Projects</a>
+      <a href="#experience" data-i18n="nav_exp">Experience</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="controls">
+      <button class="btn-icon" id="langBtn" aria-label="Switch language">فا</button>
+      <button class="btn-icon" id="themeBtn" aria-label="Toggle theme">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section id="about" class="hero">
+    <!-- Replace src with your photo; initials fallback shown if image missing -->
+    <div class="avatar" id="avatar">SB</div>
+    <div>
+      <h1>Shahram Barzani</h1>
+      <div class="role" data-i18n="role">Fullstack Senior Engineer &amp; Web Developer</div>
+      <p class="bio" data-i18n="bio"></p>
+      <div class="metrics">
+        <div class="metric"><b>25+</b><span data-i18n="m1">Years Experience</span></div>
+        <div class="metric"><b>40+</b><span data-i18n="m2">Projects Delivered</span></div>
+        <div class="metric"><b>100%</b><span data-i18n="m3">Production Ready</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title" data-i18n="skills_title">Core Stack &amp; Skills</h2>
+    <div class="skill-grid">
+      <div class="card"><h3 data-i18n="sk_be">⚙️ Backend &amp; Architecture</h3><span class="tag">.NET 9</span><span class="tag">C#</span><span class="tag">EF Core</span><span class="tag">DDD</span><span class="tag">Microservices</span></div>
+      <div class="card"><h3 data-i18n="sk_db">🗄️ Database &amp; Cache</h3><span class="tag">SQL Server</span><span class="tag">Redis</span><span class="tag">Query Tuning</span><span class="tag">High Availability</span></div>
+      <div class="card"><h3 data-i18n="sk_fe">💻 Frontend &amp; Mobile</h3><span class="tag">Angular</span><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Responsive UI</span></div>
+      <div class="card"><h3 data-i18n="sk_ops">🚀 DevOps &amp; Tools</h3><span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">Git</span><span class="tag">GitHub Actions</span></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title" data-i18n="proj_title">Featured Enterprise Projects</h2>
+    <div id="projectList"></div>
+  </section>
+
+  <section id="experience">
+    <h2 class="section-title" data-i18n="exp_title">Professional Experience</h2>
+    <ul class="exp">
+      <li><b>Mobin Sarmaye Brokerage</b> — <span data-i18n="e1">Capital market & brokerage platform systems</span></li>
+      <li><b>Ava Etminan Asset Management</b> — <span data-i18n="e2">Fintech, payments & asset management systems</span></li>
+      <li><b>System Group (SG)</b> — <span data-i18n="e3">Large-scale enterprise software</span></li>
+      <li><b>Gam Electronics</b> — <span data-i18n="e4">Industrial & embedded-adjacent software</span></li>
+      <li><b>Poya Andishan Rasam Rayan</b> — <span data-i18n="e5">Software engineering & solution design</span></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title" data-i18n="contact_title">Get in Touch</h2>
+    <div class="contact-links">
+      <a href="https://linkedin.com/in/shahram-barzani-18194390" target="_blank" rel="noopener">💼 LinkedIn</a>
+      <a href="mailto:shbarzani@gmail.com">✉️ shbarzani@gmail.com</a>
+      <a href="https://github.com/AmoShahram" target="_blank" rel="noopener">🐙 GitHub · AmoShahram</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Shahram Barzani · <a href="https://github.com/AmoShahram">AmoShahram</a> · <span data-i18n="footer">Built with ❤ — zero external dependencies</span></p>
+</footer>
+
+<script>
+/* ---- i18n ---- */
+const I18N = {
+  en:{
+    nav_about:"About",nav_skills:"Skills",nav_projects:"Projects",nav_exp:"Experience",nav_contact:"Contact",
+    role:"Fullstack Senior Engineer & Web Developer",
+    bio:"Senior Backend Developer with over 25 years of experience delivering scalable, high-performance software across business, financial, and capital-market domains. Skilled in .NET 9, EF Core, Microservices, DDD, SQL Server, and Docker — with a proven ability to build reliable, maintainable, production-ready systems.",
+    m1:"Years Experience",m2:"Projects Delivered",m3:"Production Ready",
+    skills_title:"Core Stack & Skills",sk_be:"⚙️ Backend & Architecture",sk_db:"🗄️ Database & Cache",sk_fe:"💻 Frontend & Mobile",sk_ops:"🚀 DevOps & Tools",
+    proj_title:"Featured Enterprise Projects",exp_title:"Professional Experience",
+    e1:"Capital market & brokerage platform systems",e2:"Fintech, payments & asset management systems",e3:"Large-scale enterprise software",e4:"Industrial & embedded-adjacent software",e5:"Software engineering & solution design",
+    contact_title:"Get in Touch",footer:"Built with ❤ — zero external dependencies",
+    projects:[
+      {n:"Zarban",b:"Enterprise",d:"Physical gold bullion sales platform — secure order lifecycle, inventory and settlement for precious metals commerce.",t:"C# · .NET · SQL Server · Angular",u:"https://servatafza.ir/zarban",h:"Domain: Fintech / E-commerce"},
+      {n:"Sarmayeban (ETF)",b:"Enterprise",d:"Trading platform for ETF fund transactions with real-time market data and robust settlement workflows.",t:"C# · .NET · SQL Server · Angular",u:"https://servatafza.ir/etf",h:"Domain: Capital Markets"},
+      {n:"AvaPay",b:"Production",d:"Payment management system for Tejarat Nov insurance — transaction orchestration and reconciliation APIs.",t:"C# · .NET · SQL Server",u:"https://avapayapi.aeam.ir/",h:"Domain: Insurance / Payments"},
+      {n:"Mobin Crowd",b:"Enterprise",d:"Crowdfunding & financial supply platform connecting investors with financing campaigns.",t:"C# · .NET · SQL Server · Angular",u:"https://mobincrowd.ir/",h:"Domain: Crowdfunding"}
+    ]
+  },
+  fa:{
+    nav_about:"درباره من",nav_skills:"مهارت‌ها",nav_projects:"پروژه‌ها",nav_exp:"سوابق",nav_contact:"تماس",
+    role:"مهندس ارشد فول‌استک و توسعه‌دهنده وب",
+    bio:"توسعه‌دهنده ارشد بک‌اند با بیش از ۲۵ سال تجربه در ارائه راهکارهای نرم‌افزاری مقیاس‌پذیر و پرسرعت در حوزه‌های کسب‌وکار، مالی و بازار سرمایه. متخصص در ‎.NET 9، EF Core، معماری Microservices، DDD، SQL Server و Docker — با توان اثبات‌شده در ساخت سامانه‌های قابل‌اتکا، نگه‌داشت‌پذیر و آماده تولید.",
+    m1:"سال تجربه",m2:"پروژه تحویل‌شده",m3:"آماده تولید",
+    skills_title:"تکنولوژی‌ها و مهارت‌های اصلی",sk_be:"⚙️ بک‌اند و معماری",sk_db:"🗄️ پایگاه داده و کش",sk_fe:"💻 فرانت‌اند و موبایل",sk_ops:"🚀 دواپس و ابزارها",
+    proj_title:"پروژه‌های شاخص سازمانی",exp_title:"سوابق حرفه‌ای",
+    e1:"سامانه‌های بازار سرمایه و کارگزاری",e2:"فین‌تک، پرداخت و مدیریت دارایی",e3:"نرم‌افزار سازمانی در مقیاس بزرگ",e4:"نرم‌افزار صنعتی",e5:"مهندسی نرم‌افزار و طراحی راهکار",
+    contact_title:"راه‌های ارتباطی",footer:"ساخته‌شده با ❤ — بدون وابستگی خارجی",
+    projects:[
+      {n:"زربان",b:"سازمانی",d:"پلتفرم فروش فیزیکی شمش طلا — چرخه سفارش امن، مدیریت انبار و تسویه برای تجارت فلزات گران‌بها.",t:"سی‌شارپ · دات‌نت · SQL Server · انگولار",u:"https://servatafza.ir/zarban",h:"حوزه: فین‌تک / تجارت الکترونیک"},
+      {n:"سرمایه‌بان (ETF)",b:"سازمانی",d:"پلتفرم معاملات صندوق‌های ETF با داده لحظه‌ای بازار و جریان‌های تسویه مطمئن.",t:"سی‌شارپ · دات‌نت · SQL Server · انگولار",u:"https://servatafza.ir/etf",h:"حوزه: بازار سرمایه"},
+      {n:"آواپی",b:"تولیدی",d:"سامانه مدیریت پرداخت‌های بیمه تجارت نو — هماهنگی تراکنش‌ها و APIهای تسویه.",t:"سی‌شارپ · دات‌نت · SQL Server",u:"https://avapayapi.aeam.ir/",h:"حوزه: بیمه / پرداخت"},
+      {n:"مبین کراد",b:"سازمانی",d:"پلتفرم تامین مالی جمعی، اتصال سرمایه‌گذاران به کمپین‌های تامین مالی.",t:"سی‌شارپ · دات‌نت · SQL Server · انگولار",u:"https://mobincrowd.ir/",h:"حوزه: تامین مالی جمعی"}
+    ]
+  }
+};
+let lang = localStorage.getItem("lang") || "en";
+let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+
+function applyTheme(){document.documentElement.setAttribute("data-theme",theme);document.getElementById("themeBtn").textContent = theme==="dark"?"☀️":"🌙";}
+function applyLang(){
+  const t = I18N[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang==="fa"?"rtl":"ltr";
+  document.getElementById("langBtn").textContent = lang==="fa"?"EN":"فا";
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const k=el.dataset.i18n;if(t[k])el.textContent=t[k];});
+  document.getElementById("projectList").innerHTML = t.projects.map(p=>`
+    <div class="card proj">
+      <div class="proj-head"><h3>${p.n}</h3><span class="badge">${p.b}</span></div>
+      <p>${p.d}</p>
+      <p><strong>${p.h}</strong></p>
+      <p>${p.t} — <a href="${p.u}" target="_blank" rel="noopener">${p.u.replace(/^https?:\/\//,"")}</a></p>
+    </div>`).join("");
+}
+document.getElementById("langBtn").addEventListener("click",()=>{lang = lang==="fa"?"en":"fa";localStorage.setItem("lang",lang);applyLang();});
+document.getElementById("themeBtn").addEventListener("click",()=>{theme = theme==="dark"?"light":"dark";localStorage.setItem("theme",theme);applyTheme();});
+document.getElementById("year").textContent = new Date().getFullYear();
+applyTheme();applyLang();
+/* Avatar image placeholder: set PHOTO_URL to your image; falls back to initials "SB" */
+const PHOTO_URL = "";
+if (PHOTO_URL) {
+  const img = new Image();
+  img.onload = () => { document.getElementById("avatar").innerHTML = ""; document.getElementById("avatar").style.background = `url('${PHOTO_URL}') center/cover`; };
+  img.src = PHOTO_URL;
+}
+</script>
+</body>
+</html>
