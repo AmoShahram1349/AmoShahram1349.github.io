@@ -201,7 +201,8 @@ document.getElementById("themeBtn").addEventListener("click",()=>{theme = theme=
 document.getElementById("year").textContent = new Date().getFullYear();
 applyTheme();applyLang();
 /* Avatar image placeholder: set PHOTO_URL to your image; falls back to initials "SB" */
-const PHOTO_URL = "https://github.com/AmoShahram1349/AmoShahram1349.github.io/main/assets/images/profile.jpg"; 
+// لینک درست باید با raw.githubusercontent شروع شود
+const PHOTO_URL = "https://raw.githubusercontent.com/AmoShahram1349/AmoShahram1349.github.io/main/assets/images/profile.jpg"; 
 
 if (PHOTO_URL) {
   const img = new Image();
@@ -209,10 +210,11 @@ if (PHOTO_URL) {
     const avatarEl = document.getElementById("avatar");
     avatarEl.innerHTML = ""; 
     avatarEl.style.background = `url('${PHOTO_URL}') center/cover`; 
-    avatarEl.style.borderRadius = "50%"; // اطمینان از گرد بودن
+    avatarEl.style.borderRadius = "50%"; 
   };
   img.src = PHOTO_URL;
 }
+
 </script>
 </body>
 </html>
